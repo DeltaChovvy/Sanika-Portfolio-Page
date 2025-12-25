@@ -47,7 +47,7 @@ In `components/Hero.tsx`, replace the placeholder div with:
 ```tsx
 <img 
   src="/your-hero-image.jpg" 
-  alt="Sanika Stalavdekar"
+  alt="Sanika Talavdekar"
   className="w-full h-full object-cover"
 />
 ```

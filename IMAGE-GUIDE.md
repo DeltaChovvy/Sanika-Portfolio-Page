@@ -20,7 +20,7 @@ With:
 ```tsx
 <img 
   src="/hero-image.jpg" 
-  alt="Sanika Stalavdekar"
+  alt="Sanika talavdekar"
   className="w-full h-full object-cover"
 />
 ```

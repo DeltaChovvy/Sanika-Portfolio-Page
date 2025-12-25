@@ -22,8 +22,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sanika Stalavdekar - UX Designer",
-  description: "Portfolio of Sanika Stalavdekar - Former interior designer turned UX Designer. Blending design thinking with human-centered digital experiences.",
+  title: "Sanika Talavdekar - UX Designer",
+  description: "Portfolio of Sanika Talavdekar - Former interior designer turned UX Designer. Blending design thinking with human-centered digital experiences.",
 };
 
 export default function RootLayout({
