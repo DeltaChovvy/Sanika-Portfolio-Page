@@ -1,25 +1,33 @@
+'use client';
+
+import { useState } from 'react';
+import ContactModal from './ContactModal';
+
 export default function Contact() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section id="contact" className="py-12 md:py-24 px-4 md:px-6 lg:px-16 bg-[#2B2B2B] text-white min-h-[400px] md:min-h-[600px] flex items-center">
-      <div className="max-w-[1440px] mx-auto w-full">
-        <div className="w-full">
-          {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-extralight leading-tight mb-8 md:mb-12 lg:whitespace-nowrap">
-            Let's <span className="italic font-medium">collaborate</span> on ideas
-          </h2>
-          
-          {/* Description */}
-          <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-poppins font-normal mb-8 md:mb-12 leading-relaxed w-full">
-            Got a <span className="italic">project brewing?</span> I'd love to hear about it! I am always open to nit picking at decisions and building something solid.
-          </p>
-          
-          {/* CTA Button */}
-          <a 
-            href="mailto:contact@example.com"
-            className="inline-block px-6 md:px-10 py-3 md:py-4 border-2 border-white text-white rounded-full text-base md:text-lg lg:text-xl font-medium hover:bg-white hover:text-black transition mb-8 md:mb-16"
-          >
-            Connect via email
-          </a>
+    <>
+      <section id="contact" className="py-12 md:py-24 px-4 md:px-6 lg:px-16 bg-[#2B2B2B] text-white min-h-[400px] md:min-h-[600px] flex items-center">
+        <div className="max-w-[1440px] mx-auto w-full">
+          <div className="w-full">
+            {/* Main Heading */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-extralight leading-tight mb-8 md:mb-12 lg:whitespace-nowrap">
+              Let's <span className="italic font-medium">collaborate</span> on ideas
+            </h2>
+            
+            {/* Description */}
+            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-poppins font-normal mb-8 md:mb-12 leading-relaxed w-full">
+              Got a <span className="italic">project brewing?</span> I'd love to hear about it! I am always open to nit picking at decisions and building something solid.
+            </p>
+            
+            {/* CTA Button */}
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="inline-block px-6 md:px-10 py-3 md:py-4 border-2 border-white text-white rounded-full text-base md:text-lg lg:text-xl font-medium hover:bg-white hover:text-black transition mb-8 md:mb-16 cursor-pointer"
+            >
+              Connect via email
+            </button>
           
           {/* Social Icons */}
           <div className="flex gap-4 md:gap-6 mt-8 md:mt-16">
@@ -48,5 +56,9 @@ export default function Contact() {
         </div>
       </div>
     </section>
+
+    {/* Contact Form Modal */}
+    <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 }
