@@ -34,12 +34,12 @@ export default function Projects() {
 
             {/* Image/Mockup */}
             <div className="flex justify-center items-center flex-shrink-0 lg:order-last order-first">
-              <div className="relative w-full max-w-[250px] md:max-w-[280px] lg:w-[312px] aspect-[312/425]">
+              <div className="relative w-full max-w-[248px] md:max-w-[280px] lg:w-[312px] aspect-[312/424]">
                 <Image 
                   src="/yonder wonder.svg" 
                   alt="Yonder Wonder LLC Project"
                   width={312}
-                  height={425}
+                  height={424}
                   className="w-full h-full object-contain"
                   unoptimized
                 />
@@ -70,12 +70,12 @@ export default function Projects() {
 
             {/* Image/Mockup */}
             <div className="flex justify-center items-center flex-shrink-0 lg:order-last order-first">
-              <div className="relative w-full max-w-[250px] md:max-w-[280px] lg:w-[312px] aspect-[312/425]">
+              <div className="relative w-full max-w-[248px] md:max-w-[280px] lg:w-[312px] aspect-[312/424]">
                 <Image 
                   src="/edgewise.svg" 
                   alt="Edgewise Academic Outreach Project"
                   width={312}
-                  height={425}
+                  height={424}
                   className="w-full h-full object-contain"
                   unoptimized
                 />

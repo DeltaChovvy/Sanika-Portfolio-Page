@@ -40,8 +40,8 @@ export default function About() {
               src="/avidtraveller.svg" 
               alt="An avid traveller"
               width={632}
-              height={459}
-              className="w-full md:w-[400px] lg:w-[550px] xl:w-[632px] h-auto object-contain mx-auto"
+              height={458}
+              className="w-full md:w-[400px] lg:w-[548px] xl:w-[632px] h-auto object-contain mx-auto"
               unoptimized
             />
           </div>

@@ -19,7 +19,7 @@ export default function Hero() {
             <h1 className="text-2xl md:text-3xl lg:text-[48px] leading-tight font-poppins font-light">
               Hello, I am <span className="italic font-medium">Sanika</span>;
             </h1>
-            <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
+            <div className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
               <Image 
                 src="/love.svg" 
                 alt="Sanika"
@@ -43,7 +43,7 @@ export default function Hero() {
             <h1 className="text-2xl md:text-3xl lg:text-[48px] leading-tight font-poppins font-light">
               former interior designer
             </h1>
-            <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
+            <div className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
               <Image 
                 src="/tape.svg" 
                 alt=""
@@ -67,7 +67,7 @@ export default function Hero() {
             <h1 className="text-2xl md:text-3xl lg:text-[48px] leading-tight font-poppins font-light">
               turned <span className="italic font-medium">user experience designer</span>
             </h1>
-            <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
+            <div className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
               <Image 
                 src="/phone.svg" 
                 alt=""
@@ -116,7 +116,7 @@ export default function Hero() {
               alt="Scroll down"
               width={300}
               height={300}
-              className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
+              className="w-[148px] h-[148px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
               unoptimized
               style={{ 
                 transform: 'translateZ(0)',
