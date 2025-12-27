@@ -62,9 +62,26 @@ html {
 img[src$=".svg"] {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
+  /* For SVGs with embedded bitmaps, use high quality scaling */
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Alternative: use smooth scaling for embedded raster images in SVGs */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+  img[src$=".svg"] {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: auto;
+  }
 }
 
 /* Force hardware acceleration and prevent blur on transforms */
