@@ -18,6 +18,8 @@ export default function Navigation() {
                 width={28}
                 height={28}
                 className="w-6 h-6"
+                unoptimized
+                priority
               />
             </Link>
 

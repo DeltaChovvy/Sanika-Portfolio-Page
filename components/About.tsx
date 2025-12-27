@@ -30,6 +30,7 @@ export default function About() {
               width={374}
               height={420}
               className="w-full md:w-[280px] lg:w-[340px] xl:w-[374px] h-auto object-contain mx-auto"
+              unoptimized
             />
           </div>
 
@@ -41,6 +42,7 @@ export default function About() {
               width={632}
               height={459}
               className="w-full md:w-[400px] lg:w-[550px] xl:w-[632px] h-auto object-contain mx-auto"
+              unoptimized
             />
           </div>
         </div>

@@ -57,3 +57,10 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Ensure crisp SVG rendering on all devices */
+img[src$=".svg"] {
+  shape-rendering: geometricPrecision;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}

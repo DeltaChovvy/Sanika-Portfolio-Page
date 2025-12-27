@@ -26,6 +26,8 @@ export default function Hero() {
                 width={60}
                 height={60}
                 className="w-full h-full"
+                unoptimized
+                priority
               />
             </div>
           </div>
@@ -42,6 +44,8 @@ export default function Hero() {
                 width={60}
                 height={60}
                 className="w-full h-full"
+                unoptimized
+                priority
               />
             </div>
           </div>
@@ -58,6 +62,8 @@ export default function Hero() {
                 width={60}
                 height={60}
                 className="w-full h-full"
+                unoptimized
+                priority
               />
             </div>
           </div>
@@ -93,6 +99,7 @@ export default function Hero() {
               width={300}
               height={300}
               className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
+              unoptimized
             />
           </button>
           

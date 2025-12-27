@@ -20,6 +20,7 @@ export default function ViewResume() {
               height={1100}
               className="w-full h-auto object-contain"
               priority
+              unoptimized
             />
           </div>
         </div>

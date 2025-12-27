@@ -23,6 +23,7 @@ export default function EdgewiseCaseStudy() {
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
               priority
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -37,6 +38,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -51,6 +53,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -65,6 +68,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -79,6 +83,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -93,6 +98,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -107,6 +113,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
@@ -121,6 +128,7 @@ export default function EdgewiseCaseStudy() {
               height={1080}
               className="w-full max-w-full h-auto block m-0 p-0"
               style={{ display: 'block', verticalAlign: 'top', maxWidth: '100%', height: 'auto' }}
+              unoptimized
             />
           </section>
         </FadeInSection>
