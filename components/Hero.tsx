@@ -28,6 +28,12 @@ export default function Hero() {
                 className="w-full h-full"
                 unoptimized
                 priority
+                style={{ 
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  imageRendering: 'crisp-edges'
+                }}
               />
             </div>
           </div>
@@ -46,6 +52,12 @@ export default function Hero() {
                 className="w-full h-full"
                 unoptimized
                 priority
+                style={{ 
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  imageRendering: 'crisp-edges'
+                }}
               />
             </div>
           </div>
@@ -64,6 +76,12 @@ export default function Hero() {
                 className="w-full h-full"
                 unoptimized
                 priority
+                style={{ 
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                  WebkitBackfaceVisibility: 'hidden',
+                  imageRendering: 'crisp-edges'
+                }}
               />
             </div>
           </div>
@@ -100,6 +118,12 @@ export default function Hero() {
               height={300}
               className="w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
               unoptimized
+              style={{ 
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                imageRendering: 'crisp-edges'
+              }}
             />
           </button>
           

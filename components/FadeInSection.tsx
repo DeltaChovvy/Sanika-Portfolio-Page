@@ -45,7 +45,15 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
           ? 'opacity-100 translate-y-0 md:scale-100' 
           : 'opacity-0 translate-y-10 md:translate-y-20 md:scale-95'
       }`}
-      style={{ margin: 0, padding: 0 }}
+      style={{ 
+        margin: 0, 
+        padding: 0,
+        transform: 'translateZ(0)',
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        perspective: 1000,
+        WebkitPerspective: 1000
+      }}
     >
       {children}
     </div>

@@ -60,7 +60,30 @@ html {
 
 /* Ensure crisp SVG rendering on all devices */
 img[src$=".svg"] {
-  shape-rendering: geometricPrecision;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Force hardware acceleration and prevent blur on transforms */
+.transition-all,
+.transition-transform,
+[class*="translate"],
+[class*="scale"] {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+/* Specifically target Next.js Image components containing SVGs */
+img {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0);
 }

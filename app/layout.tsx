@@ -24,6 +24,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Sanika Talavdekar - UX Designer",
   description: "Portfolio of Sanika Talavdekar - Former interior designer turned UX Designer. Blending design thinking with human-centered digital experiences.",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
 };
 
 export default function RootLayout({
@@ -32,9 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ WebkitFontSmoothing: 'subpixel-antialiased', textRendering: 'optimizeLegibility' }}>
       <body
         className={`${poppins.variable} ${manrope.variable} ${inter.variable} antialiased font-poppins`}
+        style={{ WebkitFontSmoothing: 'subpixel-antialiased' }}
       >
         {children}
       </body>
