@@ -61,7 +61,7 @@ export default function Hero() {
               {/* Desktop: static tape icon */}
               <div className="hidden md:block">
                 <Image 
-                  src="/tape.png" 
+                  src="/tapel.png" 
                   alt=""
                   width={60}
                   height={60}
@@ -73,7 +73,7 @@ export default function Hero() {
               <div className="block md:hidden">
                 <div className="absolute inset-0 animate-fade-in-out" style={{ animationDelay: '0s' }}>
                   <Image 
-                    src="/tape.png" 
+                    src="/tapel.png" 
                     alt=""
                     width={48}
                     height={48}

@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     maximumScale: 5,
     userScalable: true,
   },
+  icons: {
+    icon: '/taper.png',
+    apple: '/taper.png',
+  },
 };
 
 export default function RootLayout({
