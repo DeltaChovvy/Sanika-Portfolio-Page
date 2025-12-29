@@ -23,12 +23,11 @@ export default function Hero() {
             <div className="flex justify-center mb-4">
               <div className="w-[120px] h-[120px]">
                 <Image 
-                  src="/love.svg" 
+                  src="/love.png" 
                   alt="Sanika"
                   width={120}
                   height={120}
                   className="w-full h-full"
-                  unoptimized
                   priority
                 />
               </div>
@@ -42,12 +41,11 @@ export default function Hero() {
             </h1>
             <div className="w-[48px] h-[48px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
               <Image 
-                src="/love.svg" 
+                src="/love.png" 
                 alt="Sanika"
                 width={60}
                 height={60}
                 className="w-full h-full"
-                unoptimized
                 priority
               />
             </div>
