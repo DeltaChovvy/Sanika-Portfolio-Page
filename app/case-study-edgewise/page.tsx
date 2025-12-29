@@ -22,14 +22,15 @@ export default function EdgewiseCaseStudy() {
     window.location.reload();
   };
 
-  // Check if loading is stuck (no progress for 30 seconds)
+  // Check if loading is stuck (6 seconds per image max)
   useEffect(() => {
+    const maxTime = totalImages * 6000; // 6 seconds per image
     const checkInterval = setInterval(() => {
       const elapsed = Date.now() - startTime;
-      if (!allImagesLoaded && elapsed > 30000 && loadedCount < totalImages) {
+      if (!allImagesLoaded && elapsed > maxTime) {
         setIsStuck(true);
       }
-    }, 5000); // Check every 5 seconds
+    }, 2000); // Check every 2 seconds
 
     return () => clearInterval(checkInterval);
   }, [allImagesLoaded, loadedCount, startTime, totalImages]);

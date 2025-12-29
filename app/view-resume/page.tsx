@@ -14,14 +14,14 @@ export default function ViewResume() {
     window.location.reload();
   };
 
-  // Check if loading is stuck (no progress for 20 seconds)
+  // Check if loading is stuck (6 seconds max)
   useEffect(() => {
     const checkInterval = setInterval(() => {
       const elapsed = Date.now() - startTime;
-      if (!isLoaded && elapsed > 20000) {
+      if (!isLoaded && elapsed > 6000) {
         setIsStuck(true);
       }
-    }, 5000);
+    }, 2000); // Check every 2 seconds
 
     return () => clearInterval(checkInterval);
   }, [isLoaded, startTime]);
