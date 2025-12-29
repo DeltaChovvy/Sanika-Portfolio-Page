@@ -61,12 +61,11 @@ export default function Hero() {
               {/* Desktop: static tape icon */}
               <div className="hidden md:block">
                 <Image 
-                  src="/tape.svg" 
+                  src="/tape.png" 
                   alt=""
                   width={60}
                   height={60}
                   className="w-full h-full"
-                  unoptimized
                   priority
                 />
               </div>
@@ -74,23 +73,21 @@ export default function Hero() {
               <div className="block md:hidden">
                 <div className="absolute inset-0 animate-fade-in-out" style={{ animationDelay: '0s' }}>
                   <Image 
-                    src="/tape.svg" 
+                    src="/tape.png" 
                     alt=""
                     width={48}
                     height={48}
                     className="w-full h-full"
-                    unoptimized
                     priority
                   />
                 </div>
                 <div className="absolute inset-0 animate-fade-in-out" style={{ animationDelay: '3s' }}>
                   <Image 
-                    src="/phone.svg" 
+                    src="/mobile.png" 
                     alt=""
                     width={48}
                     height={48}
                     className="w-full h-full"
-                    unoptimized
                     priority
                   />
                 </div>
@@ -106,12 +103,11 @@ export default function Hero() {
             {/* Desktop only: show phone icon inline */}
             <div className="hidden md:block w-[48px] h-[48px] lg:w-[60px] lg:h-[60px] flex-shrink-0">
               <Image 
-                src="/phone.svg" 
+                src="/mobile.png" 
                 alt=""
                 width={60}
                 height={60}
                 className="w-full h-full"
-                unoptimized
                 priority
               />
             </div>

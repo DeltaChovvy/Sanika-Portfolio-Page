@@ -27,24 +27,22 @@ export default function About() {
             {/* Oil Painting Card */}
             <div className="absolute inset-0 flex items-center justify-center animate-fade-in-out" style={{ animationDelay: '0s' }}>
               <Image 
-                src="/oilpainting.svg" 
+                src="/oilpainting.png" 
                 alt="Oil paint enthusiast"
                 width={374}
                 height={420}
                 className="w-[90%] max-w-[350px] h-auto object-contain"
-                unoptimized
               />
             </div>
 
             {/* Avid Traveller Card */}
             <div className="absolute inset-0 flex items-center justify-center animate-fade-in-out" style={{ animationDelay: '3s' }}>
               <Image 
-                src="/avidtraveller.svg" 
+                src="/avid.png" 
                 alt="An avid traveller"
                 width={632}
                 height={458}
                 className="w-full max-w-[500px] h-auto object-contain"
-                unoptimized
               />
             </div>
           </div>
@@ -54,24 +52,22 @@ export default function About() {
             {/* Oil Painting Card */}
             <div className="relative w-auto flex-shrink-0">
               <Image 
-                src="/oilpainting.svg" 
+                src="/oilpainting.png" 
                 alt="Oil paint enthusiast"
                 width={374}
                 height={420}
                 className="w-[280px] lg:w-[340px] xl:w-[374px] h-auto object-contain"
-                unoptimized
               />
             </div>
 
             {/* Avid Traveller Card */}
             <div className="relative w-auto flex-shrink-0">
               <Image 
-                src="/avidtraveller.svg" 
+                src="/avid.png" 
                 alt="An avid traveller"
                 width={632}
                 height={458}
                 className="w-[400px] lg:w-[548px] xl:w-[632px] h-auto object-contain"
-                unoptimized
               />
             </div>
           </div>
