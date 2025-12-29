@@ -3,10 +3,28 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Contact from '@/components/Contact';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ViewResume() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isStuck, setIsStuck] = useState(false);
+  const [startTime] = useState(Date.now());
+
+  const handleRetry = () => {
+    window.location.reload();
+  };
+
+  // Check if loading is stuck (no progress for 20 seconds)
+  useEffect(() => {
+    const checkInterval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      if (!isLoaded && elapsed > 20000) {
+        setIsStuck(true);
+      }
+    }, 5000);
+
+    return () => clearInterval(checkInterval);
+  }, [isLoaded, startTime]);
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -16,8 +34,29 @@ export default function ViewResume() {
       {!isLoaded && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-gray-900 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-900 font-medium">Loading Resume</p>
+            {!isStuck ? (
+              <>
+                <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-gray-900 mx-auto mb-6"></div>
+                <p className="text-xl text-gray-900 font-medium">Loading Resume</p>
+                <p className="text-sm text-gray-500 mt-2">Please wait...</p>
+              </>
+            ) : (
+              <>
+                <div className="mb-6">
+                  <svg className="w-16 h-16 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <p className="text-xl text-gray-900 font-medium mb-2">Loading seems stuck</p>
+                <p className="text-gray-600 mb-6">The resume is taking longer than expected</p>
+                <button
+                  onClick={handleRetry}
+                  className="px-8 py-3 bg-black text-white rounded-full text-lg font-medium hover:bg-gray-800 transition"
+                >
+                  Retry Loading
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
