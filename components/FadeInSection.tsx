@@ -51,8 +51,7 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
       }`}
       style={{ 
         margin: 0, 
-        padding: 0,
-        willChange: 'opacity'
+        padding: 0
       }}
     >
       {children}

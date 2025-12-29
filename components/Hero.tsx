@@ -145,7 +145,6 @@ export default function Hero() {
                 width={300}
                 height={300}
                 className="w-[148px] h-[148px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px]"
-                unoptimized
               />
             </button>
           </div>

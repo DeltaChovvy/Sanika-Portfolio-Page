@@ -42,10 +42,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ WebkitFontSmoothing: 'subpixel-antialiased', textRendering: 'optimizeLegibility' }}>
+    <html lang="en">
       <body
         className={`${poppins.variable} ${manrope.variable} ${inter.variable} antialiased font-poppins`}
-        style={{ WebkitFontSmoothing: 'subpixel-antialiased' }}
       >
         {children}
       </body>

@@ -41,7 +41,6 @@ export default function Projects() {
                   width={312}
                   height={424}
                   className="w-full h-full object-contain"
-                  unoptimized
                 />
               </div>
             </div>
@@ -77,7 +76,6 @@ export default function Projects() {
                   width={312}
                   height={424}
                   className="w-full h-full object-contain"
-                  unoptimized
                 />
               </div>
             </div>
