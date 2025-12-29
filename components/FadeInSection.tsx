@@ -9,9 +9,13 @@ interface FadeInSectionProps {
 
 export default function FadeInSection({ children, delay = 0 }: FadeInSectionProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Mark as loaded immediately to ensure layout calculates properly
+    setHasLoaded(true);
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -21,8 +25,8 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.15,
+        rootMargin: '-100px 0px -50px 0px' // Only trigger when scrolled into view
       }
     );
 
@@ -40,19 +44,15 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
   return (
     <div
       ref={sectionRef}
-      className={`block transition-all duration-[1500ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+      className={`block transition-opacity duration-[1500ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
         isVisible 
-          ? 'opacity-100 translate-y-0 md:scale-100' 
-          : 'opacity-0 translate-y-10 md:translate-y-20 md:scale-95'
+          ? 'opacity-100' 
+          : 'opacity-0'
       }`}
       style={{ 
         margin: 0, 
         padding: 0,
-        transform: 'translateZ(0)',
-        backfaceVisibility: 'hidden',
-        WebkitBackfaceVisibility: 'hidden',
-        perspective: 1000,
-        WebkitPerspective: 1000
+        willChange: 'opacity'
       }}
     >
       {children}

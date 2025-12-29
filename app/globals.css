@@ -16,6 +16,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
 }
 
 * {
@@ -26,11 +29,26 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px; /* Account for fixed navbar height */
   overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 80px; /* Smaller navbar on mobile */
+  }
+  
+  /* Fix mobile scroll blocking issues */
+  body {
+    position: relative;
+    touch-action: pan-y pinch-zoom;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure sections don't block scrolling */
+  section {
+    position: relative;
+    overflow: visible;
   }
 }
 
@@ -48,6 +66,48 @@ html {
 
 .scroll-reveal {
   animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Mobile icon transition animation */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 6s ease-in-out infinite;
+}
+
+/* Slow bounce animation for down arrow */
+@keyframes slow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-slow-bounce {
+  animation: slow-bounce 2.5s ease-in-out infinite;
 }
 
 /* Custom styles */
